@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rsp stat="ok">
+    <list>
+        <widget id="JSREPL">
+            <title>JS REPL</title>
+            <compression size="10000" type="zip"/>
+            <description/>
+            <download>http://<your ip here>/repl.zip</download>
+        </widget>
+    </list>
+</rsp>

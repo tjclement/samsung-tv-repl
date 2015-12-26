@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>JS REPL</title>
+
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+        <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+	</head>
+
+	<body>
+
+		<h1 id="title" style="color: white;">JS WebSocket Shell</h1>
+
+		<script type="text/javascript">
+            new Common.API.Widget().sendReadyEvent();
+
+            window.addEventListener('error', function (evt) {
+                onError("Caught:  '" + evt.message + "' from " + evt.filename + ":" + evt.lineno);
+                evt.preventDefault();
+            });
+
+            function onError(message) {
+                document.getElementById('title').innerText += '\r\n' + message;
+            }
+		</script>
+
+        <script type="text/javascript" language="javascript" src="repl.js"></script>
+
+	</body>
+</html>

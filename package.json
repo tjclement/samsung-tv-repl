@@ -1,0 +1,25 @@
+{
+  "name": "samsung-tv-repl",
+  "version": "1.0.0",
+  "description": "A WebSocket based remote REPL for running JS code on Samsung Smart TVs",
+  "main": "main.js",
+  "scripts": {
+    "install": "rm www/repl.zip; cd tv; zip ../www/repl.zip ./*; cd ..; node install_server.js",
+    "start": "node repl_server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjclement/samsung-tv-repl.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tjclement/samsung-tv-repl/issues"
+  },
+  "homepage": "https://github.com/tjclement/samsung-tv-repl#readme",
+  "dependencies": {
+    "cli-input": "^0.1.12",
+    "express": "^4.13.3",
+    "ws": "^0.8.1"
+  }
+}
